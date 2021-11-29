@@ -7,6 +7,11 @@
 # APEX
 TW_EXCLUDE_APEX := true
 
+# Brightness
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_DEFAULT_BRIGHTNESS := 1400
+TW_MAX_BRIGHTNESS := 2048
+
 # Encryption
 TW_INCLUDE_CRYPTO := true
 
