@@ -1,0 +1,2 @@
+export FOX_AB_DEVICE=1
+export FOX_VIRTUAL_AB_DEVICE=1
