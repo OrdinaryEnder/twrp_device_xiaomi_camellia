@@ -1,0 +1,29 @@
+on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
+    install_keyring
+
+on property:sys.listeners.registered=true
+    start beanpod_check_keybox_service
+    start keymaster-4-0-beanpod
+    start keymaster-4-1-beanpod
+    start teei_daemon
+
+on property:vendor.sys.listeners.registered=true
+    start beanpod_check_keybox_service
+    start gatekeeper-1-0
+    start keymaster-4-0-beanpod
+    start keymaster-4-1-beanpod
+    start teei_daemon
+
+on property:ro.crypto.type=block && property:ro.crypto.fs_crypto_blkdev=*
+    setprop crypto.ready 0
+    stop beanpod_check_keybox_service
+    stop keymaster-4-0-beanpod
+    stop keymaster-4-1-beanpod
+    stop teei_daemon
+
+on property:twrp.all.users.decrypted=true
+    setprop crypto.ready 0
+    stop beanpod_check_keybox_service
+    stop keymaster-4-0-beanpod
+    stop keymaster-4-1-beanpod
+    stop teei_daemon

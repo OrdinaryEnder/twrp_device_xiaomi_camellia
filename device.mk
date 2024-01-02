@@ -33,6 +33,11 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+# Encryption
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.volume.filenames_mode=aes-256-cts \
+    ro.hardware.gatekeeper=beanpod
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
