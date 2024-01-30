@@ -14,6 +14,7 @@ TW_MAX_BRIGHTNESS := 2048
 
 # Encryption
 TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_LIBRESETPROP = true
 
 # Filesystem tools
 TW_INCLUDE_NTFS_3G := true
