@@ -76,3 +76,6 @@ BOARD_AVB_BOOT_ROLLBACK_INDEX_LOCATION := 1
 
 # TWRP Configuration
 include $(DEVICE_PATH)/BoardConfigTWRP.mk
+
+# SHRP Configuration
+include $(DEVICE_PATH)/BoardConfigSHRP.mk
